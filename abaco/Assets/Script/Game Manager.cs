@@ -17,6 +17,22 @@ public class GameManager : MonoBehaviour
     {
          instance = this;
 
+        screenBounds = new Vector3(-1, 1, 0) + Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+    }
+    public void LoseLife() 
+    {
+        lifes -= 1;
+        ManagerUI.instance.UpdateLifeText();
 
+        if (lifes = 0)
+        {
+            if (score > PlayerPrefs.GetInt("Record", Score))
+            { 
+                
+            }
+           
+            Time.timeScale = 0;
+            ManagerUI.instamce.GameOver();
+        }
     }
 }

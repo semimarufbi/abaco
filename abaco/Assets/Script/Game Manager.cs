@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         lifes -= 1;
         ManagerUI.instance.UpdateLifeText();
 
-        if (lifes = 0)
+        if (lifes == 0)
         {
             if (score > PlayerPrefs.GetInt("Record", Score))
             { 

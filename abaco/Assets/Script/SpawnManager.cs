@@ -61,6 +61,25 @@ public class SpawnManager : MonoBehaviour
         else
         {
             timer -= Time.deltaTime;
+    [SerializeField]
+    GameObject redApple;
+    [SerializeField]
+    GameObject greenApple;
+    [SerializeField]
+    GameObject goldenApple;
+
+    float timer, initialTime = 1.2f;
+    int appleType;
+
+    void Spawn() 
+    { 
+        if (timer <= 0 ) 
+        {
+            appleType = Random.Range(0, 100);
+        }
+        else if (appleType > 90) 
+        { 
+            
         }
     }
 }

@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     GameObject gameOverPanel;
 #region
     static public UIManager instance;
-    private void Awake()
+   void Awake()
     {
         instance = this;
     }

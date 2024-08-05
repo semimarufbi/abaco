@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  static GameManager instance;
+  static public GameManager instance;
     Vector2 screenBounds;
     int score;
     int lifes = 3;

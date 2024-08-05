@@ -16,5 +16,9 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
     #endregion
+    public void UpdateScoreText() 
+    {
+        scoreText.text = GameManager.instance.Score.ToString();
+    }
 
 }

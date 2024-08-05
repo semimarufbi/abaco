@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             }
            
             Time.timeScale = 0;
-            ManagerUI.instamce.GameOver();
+           ManagerUI.instance.GameOver();
         }
     }
 }

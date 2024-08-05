@@ -27,7 +27,7 @@ public class Apple : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.instance.Score = value;
-            UIManager.instance.UpdateScoreText();
+            ManagerUI.instance.UpdateScoreText();
             Destroy(gameObject);
         }
     }

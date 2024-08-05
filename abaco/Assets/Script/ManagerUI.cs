@@ -5,14 +5,14 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class ManagerUI : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI scoreText, recordText, lifeText;
     [SerializeField]
     GameObject gameOverPanel;
 #region
-    static public UIManager instance;
+    static public ManagerUI instance;
    void Awake()
     {
         instance = this;
@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     {
         scoreText.text = GameManager.instance.Score.ToString();
     }
-    void UpdateLifeText()
+    public void UpdateLifeText()
     {
         scoreText.text = GameManager.instance.Lifes.ToString();
     }

@@ -62,10 +62,6 @@ public class SpawnManager : MonoBehaviour
         else
         {
             timer -= Time.deltaTime;
-
-        else
-        {
-            timer -= Time.deltaTime;
         }
     }
 }

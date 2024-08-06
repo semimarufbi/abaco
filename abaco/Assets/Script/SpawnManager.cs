@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-<<<<<<< Updated upstream
+
     [SerializeField]
     GameObject redApple;
     [SerializeField]
@@ -18,13 +18,43 @@ public class SpawnManager : MonoBehaviour
     void Spawn() 
     { 
         if (timer <= 0 ) 
+ 
         {
             appleType = Random.Range(0, 100);
+
+            if (appleType > 90)
+            {
+                Instantiate(goldenApple, new Vector3(
+                    Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x),
+                    GameManager.instance.ScreenBounds.y,
+                    0), Quaternion.identity);
+            }
+            else if (appleType > 60)
+            {
+                Instantiate(greenApple, new Vector3(
+                    Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x),
+                    GameManager.instance.ScreenBounds.y,
+                    0), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(redApple, new Vector3(
+                    Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x),
+                    GameManager.instance.ScreenBounds.y,
+                    0), Quaternion.identity);
+            }
+
+            if (initialTime > 0.8f)
+            {
+                initialTime -= 0.05f;
+            }
+
+            timer = initialTime;
         }
         else if (appleType > 90) 
         { 
             
-=======
+
     [SerializeField]  GameObject redApple;
     [SerializeField]  GameObject greenApple;
     [SerializeField]  GameObject goldenApple;
@@ -82,7 +112,15 @@ public class SpawnManager : MonoBehaviour
         else
         {
             timer -= Time.deltaTime;
->>>>>>> Stashed changes
+
+        else
+        {
+            timer -= Time.deltaTime;
         }
     }
 }
+
+
+
+
+        

@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (timer <= 0)
         {
-            appleType = Random.Range(0, 101);
+            appleType = Random.Range(0, 100);
 
             if (appleType > 90)
             {

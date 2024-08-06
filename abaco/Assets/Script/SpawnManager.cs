@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
-{
+{    
+
     [SerializeField]  GameObject redApple;
     [SerializeField]  GameObject greenApple;
     [SerializeField]  GameObject goldenApple;
@@ -61,6 +62,15 @@ public class SpawnManager : MonoBehaviour
         else
         {
             timer -= Time.deltaTime;
+
+        else
+        {
+            timer -= Time.deltaTime;
         }
     }
 }
+
+
+
+
+        
